@@ -1,6 +1,52 @@
 # TomExtract
 
-TODO: Write a gem description
+TomExtract extracts TomDoc from Ruby source files. It provides the answer as a nice Hash. i.e.
+
+given a source file like this
+
+```ruby
+module Foo
+  class Bar
+
+    # Public: Duplicate some text an arbitrary number of times.
+    #
+    # text  - The String to be duplicated.
+    # count - The Integer number of times to duplicate the text.
+    #
+    # Examples
+    #
+    #   multiplex('Tom', 4)
+    #   # => 'TomTomTomTom'
+    #
+    # Returns the duplicated String.
+    def multiplex(text, count)
+      text * count
+    end
+  end
+end
+```
+it provides the following data
+
+```ruby
+    { "Foo" => {
+        "Bar" => {
+          "multiplex" => "    # Public: Duplicate some text an arbitrary number of times.
+    #
+    # text  - The String to be duplicated.
+    # count - The Integer number of times to duplicate the text.
+    #
+    # Examples
+    #
+    #   multiplex('Tom', 4)
+    #   # => 'TomTomTomTom'
+    #
+    # Returns the duplicated String."
+        }
+      }
+    }
+  }
+```
+
 
 ## Installation
 
@@ -15,10 +61,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install tom_extract
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
