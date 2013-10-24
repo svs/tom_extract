@@ -4,3 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem "sexp_info", :path => "../sexp_info"
+
+group :debug do
+  gem 'pry_debug'
+end

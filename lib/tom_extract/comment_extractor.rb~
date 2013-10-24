@@ -1,0 +1,5 @@
+class CommentExtractor
+
+  def initialize(pathname, line_number)
+
+  end

@@ -1,3 +1,3 @@
-module TomExtract
+class TomExtract
   VERSION = "0.0.1"
 end
