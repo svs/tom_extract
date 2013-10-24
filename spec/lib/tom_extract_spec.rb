@@ -8,7 +8,7 @@ describe TomExtract do
   its(:result) { should ==
     { "Foo" => {
         "Bar" => {
-          "mult" => "    # Public: Duplicate some text an arbitrary number of times.
+          "multiplex" => "    # Public: Duplicate some text an arbitrary number of times.
     #
     # text  - The String to be duplicated.
     # count - The Integer number of times to duplicate the text.

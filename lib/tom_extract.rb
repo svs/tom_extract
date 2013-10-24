@@ -26,14 +26,13 @@ class TomExtract
   def extract_methods(h = sexp_info.to_h)
     Hash[
          h.map do |name, item|
-           puts name, item.class
            [name, item.is_a?(SexpThing::Def) ? method_with_comments(item) : (item.is_a?(Hash) ? extract_methods(item) : nil)]
-         end
+         end.reject{|k,v| k == :sexp}
         ]
   end
 
   def method_with_comments(m)
-
+    CommentExtractor.new(pathname, m.line_number).comment
   end
 
   def sexp
