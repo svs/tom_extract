@@ -1,5 +1,5 @@
 # TomExtract
-
+[![Build Status](https://travis-ci.org/svs/tom_extract.png)](https://travis-ci.org/svs/tom_extract) [![Code Climate](https://codeclimate.com/github/svs/tom_extract.png)](https://codeclimate.com/github/svs/tom_extract)
 TomExtract extracts TomDoc from Ruby source files. It provides the answer as a nice Hash. i.e.
 
 given a source file like this
